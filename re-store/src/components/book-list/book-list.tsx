@@ -1,13 +1,14 @@
 import './book-list.css';
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { bookAddedToCart, fetchBooks } from '../../store';
+import { bookAddedToCart, fetchBooks } from '~/store';
+
 import { BookItem } from '../book-item';
 import { QueryResult } from '../query-result';
 
-export function BookList() {
+export function BookList(): React.JSX.Element {
   const dispatch = useDispatch();
 
   useEffect(() => {

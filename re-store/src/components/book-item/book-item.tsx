@@ -1,6 +1,8 @@
 import './book-item.css';
 
-export function BookItem({ book, onAddedToCart }) {
+import React from 'react';
+
+export function BookItem({ book, onAddedToCart }): React.JSX.Element {
   const { title, author, price, coverImage } = book;
 
   return (

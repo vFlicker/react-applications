@@ -13,18 +13,6 @@ a:hover {
   color: #000000;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main {
-  flex-grow: 1;
-  padding: 40px 0;
-  background-color: #fffefd;
-}
-
 .container {
   width: 100%;
   max-width: 1180px;

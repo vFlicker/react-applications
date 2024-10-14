@@ -1,14 +1,15 @@
 import './shopping-cart-table.css';
 
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
   allBookRemovedFormCart,
   bookAddedToCart,
   bookRemovedFormCart,
-} from '../../store';
+} from '~/store';
 
-export function ShoppingCartTable() {
+export function ShoppingCartTable(): React.JSX.Element {
   const { cartItems, orderTotal } = useSelector((state) => state.shoppingCart);
 
   return (
@@ -37,7 +38,7 @@ export function ShoppingCartTable() {
   );
 }
 
-function Row({ item, index }) {
+function Row({ item, index }): React.JSX.Element {
   const { id, title, count, total } = item;
 
   const dispatch = useDispatch();
