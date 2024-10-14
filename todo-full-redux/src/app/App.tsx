@@ -1,3 +1,5 @@
+import './App.css';
+
 import { Header } from '../components/Header';
 import { TodoApp } from '../components/TodoApp';
 import classes from './App.module.css';

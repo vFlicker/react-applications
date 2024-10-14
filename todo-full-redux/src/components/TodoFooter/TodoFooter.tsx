@@ -1,14 +1,14 @@
 import { Color, Status } from '~/domain/filters';
 import { useAppDispatch, useAppSelector } from '~/store';
 import {
-  filterByStatusChanged,
   filterByColorChanged,
+  filterByStatusChanged,
   selectFilterByColors,
   selectFilterByStatus,
 } from '~/store/feature/filters/filtersSlice';
 import {
-  completedTodosCleared,
   allTodosCompleted,
+  completedTodosCleared,
   selectRemainingTodos,
 } from '~/store/feature/todos/todosSlice';
 import { capitalize } from '~/utils/capitalize';
