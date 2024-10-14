@@ -1,19 +1,19 @@
-.book-item {
+.book {
   display: flex;
   margin: 15px 0;
 }
 
-.book-item .book-cover {
+.cover {
   flex-shrink: 0;
   width: 120px;
   margin-right: 30px;
 }
 
-.book-item .book-cover img {
+.image {
   max-width: 100%;
 }
 
-.book-item .book-details {
+.details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,10 +21,14 @@
   align-items: flex-start;
 }
 
-.book-item .book-details .book-title {
+.title {
   font-size: 1.2rem;
 }
 
-.book-item .book-details .book-price {
+.author {
+  font-size: 1.4rem;
+}
+
+.price {
   font-size: 1.4rem;
 }

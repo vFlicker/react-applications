@@ -1,11 +1,11 @@
-import './spinner.css';
-
 import React from 'react';
+
+import classes from './spinner.module.css';
 
 export function Spinner(): React.JSX.Element {
   return (
-    <div className="loader">
-      <div className="loader__content">Loading...</div>
+    <div className={classes.loader}>
+      <div className={classes.content}>Loading...</div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.error-indicator {
+.error {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
   background: tomato;
 }
 
-.error-indicator__text {
+.text {
   margin: 0;
   color: #000000;
   font-size: 17px;
