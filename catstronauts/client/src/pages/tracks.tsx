@@ -4,25 +4,10 @@ import { useQuery } from '@apollo/client/react';
 import { Layout, QueryResult } from '~/components';
 import { TrackCard } from '~/containers/track-card';
 
-const TRACKS = gql`
-  query ExampleQuery {
-    tracksForHome {
-      id
-      title
-      author {
-        id
-        name
-        photo
-      }
-      thumbnail
-      length
-      modulesCount
-    }
-  }
-`;
+import { GetTracksDocument } from './tracks.generated';
 
 export function TracksPage() {
-  const { loading, error, data } = useQuery(TRACKS);
+  const { loading, error, data } = useQuery(GetTracksDocument);
 
   return (
     <Layout grid>

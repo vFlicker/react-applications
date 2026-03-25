@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
 
 import { colors, mq } from '~/styles';
-import type { Track } from '~/types/content';
 import { humanReadableTimeFromSeconds } from '~/utils/helpers';
 
+import type { TrackCardFragment } from './track-card.generated';
+
 type TrackCardProps = {
-  track: Pick<Track, 'author' | 'length' | 'thumbnail' | 'title'> & {
-    modulesCount?: number;
-  };
+  track: TrackCardFragment;
 };
 
 export function TrackCard({ track }: TrackCardProps) {

@@ -1,0 +1,12 @@
+fragment TrackCard on Track {
+  title
+  thumbnail
+  id
+  author {
+    id
+    name
+    photo
+  }
+  length
+  modulesCount
+}

@@ -1,0 +1,5 @@
+query GetTracks {
+  tracksForHome {
+    ...TrackCard
+  }
+}
