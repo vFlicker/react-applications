@@ -9,7 +9,8 @@ const mockModule: Module = {
   title: 'The Night Sky',
   content:
     '# Et tempus voces tigride remisso fer coimus\n\n## Montibus arbusta detrectas haud\n\n',
-  thumbnail: null,
+  thumbnail:
+    'https://res.cloudinary.com/apollographql/image/upload/v1730818804/odyssey/lift-off-api/nebula_cat_djkt9r_nzifdj.jpg',
   videoUrl: 'https://youtu.be/dlKzlksOUtU',
   topic: 'Cat-stronomy',
   length: 164,

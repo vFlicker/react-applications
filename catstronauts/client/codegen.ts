@@ -7,16 +7,27 @@ const config: CodegenConfig = {
   ignoreNoDocuments: true,
 
   generates: {
+    './src/types/graphql.generated.ts': {
+      plugins: [{ add: { content: '// @ts-nocheck' } }, 'typescript'],
+    },
     './src/': {
       preset: 'near-operation-file',
-      plugins: ['typescript-operations', 'typed-document-node'],
+      presetConfig: {
+        baseTypesPath: './types/graphql.generated.ts',
+      },
+      plugins: [
+        { add: { content: '// @ts-nocheck' } },
+        'typescript-operations',
+        'typed-document-node',
+      ],
       config: {
+        useTypeImports: true,
         avoidOptionals: {
           field: true,
           inputValue: false,
         },
         defaultScalarType: 'unknown',
-        nonOptionalTypename: true,
+        nonOptionalTypename: false,
         skipTypeNameForRoot: true,
       },
     },

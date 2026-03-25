@@ -1,4 +1,7 @@
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
-export type TrackCardFragment = { __typename: 'Track', title: string, thumbnail: string | null, id: string, length: number | null, modulesCount: number | null, author: { __typename: 'Author', id: string, name: string, photo: string | null } };
+// @ts-nocheck
+import type * as Types from '../types/graphql.generated';
+
+import type { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
+export type TrackCardFragment = { __typename?: 'Track', title: string, thumbnail: string, id: string, length: number, modulesCount: number, author: { __typename?: 'Author', id: string, name: string, photo: string } };
 
 export const TrackCardFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TrackCard"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Track"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"thumbnail"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"photo"}}]}},{"kind":"Field","name":{"kind":"Name","value":"length"}},{"kind":"Field","name":{"kind":"Name","value":"modulesCount"}}]}}]} as unknown as DocumentNode<TrackCardFragment, unknown>;
