@@ -22,7 +22,7 @@ export default tseslint.config(
   },
 
   {
-    ignores: ['/dist'],
+    ignores: ['/dist', '**/*.generated.ts'],
   },
 
   {

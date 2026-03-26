@@ -15,10 +15,12 @@
     "build": "npm run clean && npm run compile",
     "clean": "rimraf dist",
     "compile": "tsc -p tsconfig.json",
-    "lint": "eslint src/ --ext .ts --fix",
+    "generate": "graphql-codegen",
+    "lint": "eslint ./src --fix",
     "ts": "tsx"
   },
   "dependencies": {
+    "@apollo/datasource-rest": "6.4.1",
     "@apollo/server": "5.5.0",
     "@graphql-tools/mock": "9.1.5",
     "@graphql-tools/schema": "10.0.31",
@@ -27,6 +29,9 @@
   },
   "devDependencies": {
     "@eslint/js": "9.10.0",
+    "@graphql-codegen/cli": "6.2.1",
+    "@graphql-codegen/typescript": "5.0.9",
+    "@graphql-codegen/typescript-resolvers": "5.1.7",
     "@types/node": "22.5.4",
     "@typescript-eslint/eslint-plugin": "8.4.0",
     "@typescript-eslint/parser": "8.4.0",
