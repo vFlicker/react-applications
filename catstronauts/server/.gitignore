@@ -23,3 +23,6 @@ src/express/upload/img/*.*
 
 # Files with environment variables
 .env
+
+# Generated files
+*.generated.*
