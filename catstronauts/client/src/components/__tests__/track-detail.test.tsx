@@ -1,10 +1,11 @@
 import { afterEach, describe, it } from 'vitest';
 
 import { TrackDetail } from '~/components/track-detail';
-import type { Track } from '~/types/content';
 import { cleanup, renderWithRouter } from '~/utils/test-utils';
 
-const mockTrack: Track = {
+import type { TrackDetailFragment } from '../track-detail.generated';
+
+const mockTrack: TrackDetailFragment = {
   id: 'c_0',
   title: 'Cat-stronomy, an introduction',
   description: '# Pulchra vehi vidit misera sola armenta secabatur\n\n',
@@ -14,6 +15,7 @@ const mockTrack: Track = {
   modulesCount: 10,
   numberOfViews: 51,
   author: {
+    id: 'a_0',
     name: 'Henri, le Chat Noir',
     photo:
       'https://images.unsplash.com/photo-1442291928580-fb5d0856a8f1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzA0OH0',

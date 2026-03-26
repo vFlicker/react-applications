@@ -2,7 +2,7 @@
  * Format seconds to human readable text in a compact form:
  * s, m or H:m (not m:s or H:m:s)
  */
-export const humanReadableTimeFromSeconds = (seconds: number) => {
+export const humanReadableTimeFromSeconds = (seconds: number = 0) => {
   if (seconds < 60) {
     return `${seconds}s`;
   }

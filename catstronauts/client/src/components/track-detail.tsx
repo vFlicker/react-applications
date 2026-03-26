@@ -11,11 +11,12 @@ import {
   IconTime,
   IconView,
 } from '~/styles';
-import type { Track } from '~/types/content';
 import { humanReadableTimeFromSeconds } from '~/utils/helpers';
 
+import type { TrackDetailFragment } from './track-detail.generated';
+
 type TrackDetailProps = {
-  track: Track;
+  track?: TrackDetailFragment;
 };
 
 export function TrackDetail({ track }: TrackDetailProps) {
@@ -23,12 +24,12 @@ export function TrackDetail({ track }: TrackDetailProps) {
     title,
     description,
     thumbnail,
-    author,
+    author = { photo: '', name: '' },
     length,
     modulesCount,
-    modules,
+    modules = [],
     numberOfViews,
-  } = track;
+  } = track ?? {};
 
   return (
     <ContentSection>
@@ -78,7 +79,7 @@ export function TrackDetail({ track }: TrackDetailProps) {
                 <li key={moduleItem.id}>
                   <div>{moduleItem.title}</div>
                   <ModuleLength>
-                    {humanReadableTimeFromSeconds(moduleItem.length)}
+                    {humanReadableTimeFromSeconds(moduleItem.length ?? 0)}
                   </ModuleLength>
                 </li>
               ))}
@@ -86,7 +87,7 @@ export function TrackDetail({ track }: TrackDetailProps) {
           </DetailItem>
         </ModuleListContainer>
       </TrackDetails>
-      <Markdown content={description} />
+      {description && <Markdown content={description} />}
     </ContentSection>
   );
 }

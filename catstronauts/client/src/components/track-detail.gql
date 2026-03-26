@@ -1,0 +1,19 @@
+fragment TrackDetail on Track {
+  id
+  title
+  thumbnail
+  length
+  modulesCount
+  description
+  numberOfViews
+  author {
+    id
+    name
+    photo
+  }
+  modules {
+    id
+    title
+    length
+  }
+}

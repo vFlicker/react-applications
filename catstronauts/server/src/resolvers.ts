@@ -5,9 +5,17 @@ export const resolvers: Resolvers = {
     tracksForHome: (_parent, _args, { dataSources }, _info) => {
       return dataSources.trackAPI.getTracksForHome();
     },
+
+    track: (_parent, { id }, { dataSources }, _info) => {
+      return dataSources.trackAPI.getTrack(id);
+    },
   },
 
   Track: {
+    modules: ({ id }, _args, { dataSources }, _info) => {
+      return dataSources.trackAPI.getTrackModules(id);
+    },
+
     author: ({ authorId }, _args, { dataSources }, _info) => {
       return dataSources.trackAPI.getAuthor(authorId);
     },

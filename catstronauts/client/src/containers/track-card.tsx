@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 import { colors, mq } from '~/styles';
 import { humanReadableTimeFromSeconds } from '~/utils/helpers';
@@ -10,10 +11,10 @@ type TrackCardProps = {
 };
 
 export function TrackCard({ track }: TrackCardProps) {
-  const { title, thumbnail, author, length, modulesCount = 0 } = track;
+  const { id, title, thumbnail, author, length, modulesCount = 0 } = track;
 
   return (
-    <CardContainer>
+    <CardContainer to={`/tracks/${id}`}>
       <CardContent>
         <CardImageContainer>
           <CardImage alt={title} src={thumbnail} />
@@ -35,7 +36,7 @@ export function TrackCard({ track }: TrackCardProps) {
   );
 }
 
-const CardContainer = styled.div({
+const CardContainer = styled(Link)({
   borderRadius: 6,
   color: colors.text,
   backgroundSize: 'cover',

@@ -1,0 +1,5 @@
+query GetTrack($trackId: ID!) {
+  track(id: $trackId) {
+    ...TrackDetail
+  }
+}
